@@ -8,3 +8,5 @@ public interface ClientServicesRepository extends JpaRepository<ClientServices, 
 	@Query("select max(serialNumber) from ClientServices")
 	public Integer getLastSerialNumber();
 }
+
+

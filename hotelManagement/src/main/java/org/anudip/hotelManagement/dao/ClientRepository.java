@@ -6,6 +6,6 @@ import org.springframework.data.jpa.repository.Query;
 
 public interface ClientRepository extends JpaRepository<Client, Integer> {
 	@Query("select max(clientNumber) from Client")
-	public Integer getMaxClientNumber();
+	public Integer getLastClientNumber();
 
 }

@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 
 public interface HotelRepository extends JpaRepository<Hotel, String> {
 	@Query("select max(hotelId) from Hotel")
-	public String getMaxHotelId();
+
+	public String getLastHotelId();
 
 }
