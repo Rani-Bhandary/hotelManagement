@@ -8,20 +8,23 @@ import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 @Repository
 @Service
-public abstract class ClientServicesDaoImpl implements ClientServicesDao {
+public class ClientServicesDaoImpl implements ClientServicesDao {
 	@Autowired
 	private ClientServicesRepository repository;
+	
+	// to save ClientService records in the database
 	@Override
 	public void save(ClientServices clientService) {
 		repository.save(clientService);
-
 	}
 
+	//to get all client service records
 	@Override
 	public List<ClientServices> allClientServiceRecords() {
 		return repository.findAll();
 	}
 
+	//to generate new serial number
 	@Override
 	public Integer generateSerialNumber() {
 		Integer  id = repository.getLastSerialNumber();
@@ -36,6 +39,7 @@ public abstract class ClientServicesDaoImpl implements ClientServicesDao {
 
 	@Override
 	public List<ClientServices> clientServicesByClientNumber(Integer clientNumber) {
-		return null;
+		return repository.getClientServicesByClientNumber(clientNumber);
 	}
+
 }

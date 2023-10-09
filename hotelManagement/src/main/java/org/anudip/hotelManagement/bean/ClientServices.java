@@ -17,6 +17,8 @@ public class ClientServices {
 	private String serviceType;
 	private String date;
 	private Double amount;
+	
+	// Constructors
 	public ClientServices() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -29,6 +31,12 @@ public class ClientServices {
 		this.date = date;
 		this.amount = amount;
 	}
+	
+	public ClientServices(Integer serialNumber) {
+		super();
+		this.serialNumber = serialNumber;
+	}
+	// Getter and Setter Methods
 	public Integer getSerialNumber() {
 		return serialNumber;
 	}

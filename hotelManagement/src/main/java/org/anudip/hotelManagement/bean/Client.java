@@ -18,9 +18,16 @@ public class Client {
 	private String checkoutDate;
 	private String accommodationId;
 	private String payStatus;
+	
+	// Constructors
 	public Client() {
 		super();
 		// TODO Auto-generated constructor stub
+	}
+	
+	public Client(Integer clientNumber) {
+		super();
+		this.clientNumber = clientNumber;
 	}
 	public Client(Integer clientNumber, String clientName, String clientAddress, String contactNo, String gender,
 			String hotelId, String checkinDate, String checkoutDate, String accommodationId, String payStatus) {
@@ -36,6 +43,8 @@ public class Client {
 		this.accommodationId = accommodationId;
 		this.payStatus = payStatus;
 	}
+
+	// Getter and Setter Methods
 	public Integer getClientNumber() {
 		return clientNumber;
 	}
